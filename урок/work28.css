@@ -1,0 +1,133 @@
+.e1 a {
+    color: white;
+}
+
+header {
+    background-color: black;
+
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    margin-right: 25px;
+}
+
+.blocks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.block img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+
+img {
+    -webkit-animation: kartinki 0.5s;
+}
+
+@keyframes kartinki {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    box-shadow: inset 0 0 4px thistle;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: khaki;
+    box-shadow: inset 0 0 10px hotpink;
+}
+
+nav a {
+    -webkit-animation: homet 3s infinite;
+}
+
+@media (max-width:1200px) {
+    nav {
+        justify-content: space-around;
+    }
+
+    .blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:500px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin-top: 30px;
+    }
+}
+
+@keyframes homet {
+    0% {
+        text-shadow: 0 0 5px rebeccapurple;
+    }
+
+    25% {
+        text-shadow: 0 0 5px peru;
+    }
+
+    50% {
+        text-shadow: 0 0 5px lawngreen;
+    }
+
+    75% {
+        text-shadow: 0 0 5px sandybrown;
+    }
+
+    100% {
+        text-shadow: 0 0 5px gold;
+    }
+}
+
+.blocks {
+    -webkit-animation: yupi 2s infinite;
+}
+
+@keyframes yupi {
+    0% {
+        background-color: rebeccapurple;
+    }
+
+    25% {
+        background-color: peru;
+    }
+
+    50% {
+        background-color: lawngreen;
+    }
+
+    75% {
+        background-color: sandybrown;
+    }
+
+    100% {
+        background-color: gold;
+    }
+}

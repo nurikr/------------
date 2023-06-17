@@ -1,0 +1,67 @@
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+ }
+ body{
+    margin: 0;
+ }
+ nav a {
+    color: white;
+    text-decoration: none;
+ }
+.top{
+    float: left;
+    shape-outside: circle(50%);
+    clip-path: circle(50%);
+    width: 400px;
+    height: 400px;
+}
+.pot{
+    float: left;
+    shape-outside: circle(50%);
+    clip-path: circle(50%);
+    width: 400px;
+    height: 400px;
+}
+.noy{
+    display: flex;
+    
+}
+.noys{
+    display: flex ;
+ }
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-top: 20px;
+    color: white;
+}
+
+footer{
+    background-color: rgb(152, 152, 255);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.carta{
+    display: flex;
+    justify-content: center;
+}
+
+.divtop{
+    width: 100%;
+    height: 400px;
+}
+
+.divpot{
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}

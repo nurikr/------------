@@ -1,0 +1,17 @@
+.wer1 img{
+    float: left;
+    width: 350px;
+    clip-path: polygon(0 0,0 100%,100% 100%,70% 0);
+    shape-outside:polygon(0 0,0 100%,100% 100%,70% 0) ;
+}
+
+.wer1{
+    background: linear-gradient(90deg, rgba(29,0,36,1) 0%, rgba(9,98,121,1) 35%, rgba(255,0,0,1) 100%);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.wer1 p{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
