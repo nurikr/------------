@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Shape {
+            constructor(width, height) {
+                this.width = width
+                this.height = height
+            }
+
+            getData(){
+                return "Width: "+ this.width + ' ,heigtt: '+ this.height
+            }
+        }
+
+        class Rectangle extends Shape{
+            constructor(width,height){
+                super(width,height)
+            }
+
+            getP(){
+              return  this.width*2 + this.height*2
+            }
+            getArea(){
+              return  this.width*this.height
+            }
+
+            getData(){
+                return super.getData() + ' ,P: ' + this.getP() + ' ,Area: '+ this.getArea()
+            }
+        }
+
+        class Sguare extends Shape{
+            constructor(width,height){
+                super(width,height)
+            }
+
+            getP(){
+              return  this.width*4
+            }
+            getArea(){
+              return  this.width*this.width
+            }
+        }
+
+        let a1 = new Rectangle(100,150)
+        alert(a1.getData())
+
+        let s1 = new Sguare(100,100)
+        alert(s1.getP())
+    </script>
+</body>
+
+</html>

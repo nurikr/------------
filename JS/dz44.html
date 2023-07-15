@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      class Anime {
+        constructor(anime,gg){
+            this.anime = anime;
+            this.gg = gg;
+        }
+
+        getAnime(){
+            return  'Anime name: ' + this.anime + ',GG: ' + this.gg
+        }
+      }
+
+      class Sposobnosti extends Anime{
+        constructor(anime,gg,la,bf){
+            super(anime,gg,la,bf)
+            this.la =la;
+            this.bf =bf;
+        }
+
+    getNaruto() {
+        return  super.getAnime() + ',Лучшая атака: ' + this.la + ',лучший друг: '+ this.bf
+    }
+    
+      }
+
+      let n=new Sposobnosti('Наруто','Наруто','гудадама-шары','Cаске')
+      alert(n.getNaruto())
+    </script>
+</body>
+</html>

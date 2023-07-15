@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #red{
+        background-color: red;
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="red" onclick="red()">подпишись</button>
+    </div>
+
+    <script>
+        function red(){
+            document.getElementById('red').style.background='gray'
+            document.getElementById('red').style.border='none'
+            document.getElementById('red').textContent='вы подписаны'
+        }
+    </script>
+</body>
+</html>

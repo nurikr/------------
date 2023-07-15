@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="work46.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="input-task">
+                <input id="text" type="text" 
+                placeholder="Какие у вас планы на завтра?">
+                <button class="button-task" onclick="addTasks()">Добавить</button>
+            </div>
+            <div class="input-task">
+                <h1>Удаление</h1>
+                <button class="button-task" onclick="deleteTask()" type="button">Удалить</button>
+              </div> 
+        </form>
+        <div class="tasks" id="tasks">
+        </div>
+    </div>
+    <script>
+        function addTasks(){
+            let text=document.getElementById('text').value 
+            let text_id=localStorage.length+1
+
+            localStorage.setItem(text_id,text)
+
+            let task = document.createElement('div')
+                let task_text = document.createElement('div')
+                let task_id = document.createElement('div')
+                task_text.innerHTML=text 
+                task_id.innerHTML=text_id
+
+                task_text.className='task-text'
+                task_id.className='task-id'
+                task.className='task'
+
+                task.innerHTML = task_text.outerHTML + task_id.outerHTML
+                document.getElementById('tasks').appendChild(task)
+        }
+        function showTasks(){
+            for(let i =1;i<=localStorage.length;i++){
+                let text =localStorage.getItem(i)
+
+                let task = document.createElement('div')
+                let task_text = document.createElement('div')
+                let task_id = document.createElement('div')
+                task_text.innerHTML=text 
+                task_id.innerHTML=i
+
+                task_text.className='task-text'
+                task_id.className='task-id'
+                task.className='task'
+
+                task.innerHTML = task_text.outerHTML + task_id.outerHTML
+                document.getElementById('tasks').appendChild(task)
+            }
+        }
+        showTasks()
+
+        function deleteTask(){
+            let id = localStorage.length
+            localStorage.removeItem(id)
+
+            document.getElementById('tasks').innerHTML=''
+            showTasks()
+        }
+    </script>
+</body>
+</html>

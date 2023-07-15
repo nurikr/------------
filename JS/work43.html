@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class Rectangle{
+            constructor(width , height){
+                this.width = width
+                this.height = height
+            }
+
+            getPl(){
+             return this.width*this.height
+            }
+
+            getP(){
+                return this.width*2 + this.height*2
+            }
+        }
+
+        let cvadrad= new Rectangle(350,350)
+
+        let pl= cvadrad.getPl()
+        alert(pl)
+        let cvadrad2= new Rectangle(250,250)
+
+        let p=cvadrad2.getP()
+        alert(p)
+    </script>
+</body>
+
+</html>

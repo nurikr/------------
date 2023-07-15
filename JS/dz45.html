@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Cat {
+            #hunger
+            #energy
+            #mood
+            constructor(hunger,energy,mood) {
+                this.#hunger =hunger;
+                this.#energy = energy;
+                this.#mood = mood;
+            }
+
+            Feed(){
+                this.#hunger--
+                this.#mood++
+                this.meow()
+            }
+            Sleep() {
+                this.#hunger++
+                this.#energy++
+                this.#mood--
+                this.meow()
+            }
+            Play() {
+                this.#hunger++
+                this.#energy--
+                this.#mood++
+                this.meow()
+            }
+            meow(){
+                console.log('meow')
+            }
+        }
+        let g = new Cat(100,50,45)
+        g.Feed()
+    </script>
+</body>
+
+</html>

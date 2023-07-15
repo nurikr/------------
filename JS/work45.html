@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            #id
+            #name
+            #age
+            #gmail
+            #login
+            constructor(id, name, age, gmail, login) {
+                this.#id = id;
+                this.#name = name;
+                this.#age = age;
+                this.#gmail = gmail;
+                this.#login = login
+            }
+
+            get getId(){
+                return this.#id
+            }
+            get getName(){
+                return this.#name
+            }
+            get getAge(){
+                return this.#age
+            }
+            get getGmail(){
+                return this.#gmail
+            }
+            get getLogin(){
+                return this.#login
+            }
+
+            set setId(new_id){
+                this.#id=new_id
+            }
+            set setName(new_name){
+                this.#name=new_name
+            }
+            set setAge(new_age){
+                this.#age=new_age
+            }
+            set setGmail(new_gmail){
+                this.#gmail=new_gmail
+            }
+            set setLogin(new_login){
+                this.#login=new_login
+            }
+            
+            getEntry(){
+                return 'ID: '+ this.getId + ' Name: '+ this.getName + ' Age: '+this.getAge +' Gmail: '+this.getGmail +' Login: '+this.getLogin
+            }
+        }
+        let nuridin=new User(231628402549,'Nuridin','13','toptop505060gmail.com','topik54321')
+        alert(nuridin.getEntry())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blockw {
+            width: 200px;
+            background-color: black;
+            color: aqua;
+            text-align: center;
+        }
+        .block img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="world">
+    </div>
+    <button onclick="addworld()">add world</button>
+    <button onclick="deletetext()">delete</button>
+
+
+    <script>
+
+        function addworld() {
+            let posttext = prompt('Введите текст поста')
+            let img_src = prompt('Ссылка на картинку')
+
+            let block = document.createElement('div')
+            block.classList.add('block')
+
+            let post = document.createElement('h3')
+            post.classList.add('post')
+            post.innerHTML = posttext
+
+            let img = document.createElement('img')
+            img.src = img_src
+
+            block.innerHTML = post.outerHTML + img.outerHTML
+            document.getElementById('world').appendChild(block)
+
+        }
+
+
+        function deletetext() {
+            document.getElementById('world').remove()
+        }
+    </script>
+</body>
+
+</html>
